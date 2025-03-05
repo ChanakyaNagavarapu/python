@@ -1,0 +1,276 @@
+if and else and if elif else.
+=============================================================================
+
+1) if():				#in if block is empty then it will comes as false and print else block, 
+    print("hyd")
+    print("sdec")
+    print("vija")
+else:					
+    print("one")
+    print("tow")
+    print('three')
+
+Output: hyd
+	sdec
+	vija
+
+2)if{10:20,20:30}:			#In if condition list, dist, tuple, set all are accept 
+    print('one')
+    print('two')
+    print('three')
+print('out side the block')
+
+output: one
+	two
+	three
+	out side the block
+
+3)if{}:					#in if block is empty then it will comes as false and print outside the block
+    print('one')
+    print('two')
+    print('three')
+print('out side the block')
+
+output: out side the block
+
+4) write a program to print month name for input month number by using if and elif.
+i)Enter month number(1-12): if we give 7 the output will be July.
+ii)Enter month number(1-12): if we give 13 as input the output will be please give input 1 to 12 only.
+iii) Enter month number(1-12): if we give 10.4 the output will be Input should be an integer only.
+
+try:
+    a=int(input("Enter Month number: "))
+    if a==1:
+        print('January')
+    elif a==2:
+        print('feb')
+    elif a==3:
+        print('Mar')
+    elif a==4:
+        print('April')
+    elif a==5:
+        print('MAY')
+    elif a==6:
+        print('June')
+    elif a==7:
+        print('July')
+    elif a==8:
+        print('Aug')
+    elif a==9:
+        print('Sept')
+    elif a==10:
+        print('Oct')
+    elif a==11:
+        print('Nov')
+    elif a==12:
+        print('dec')
+    else:
+        print('Input should be an between 1 to 12')
+except:
+    print('The input should be integer')
+
+5) write a program to test year is leap year or not 
+  i) What is leap year? Divisible by 4 (or) divisible by 400, but not 100
+  ii)2016, 2022, 2024 are leap years --> It is divisible by 4
+  iii) 1700, 1400, 1800 leap years---> No it is not divisible by 4 or 400
+  iv) 1600, 2000, 2400 leap years ----> Yes it is divisible by 400
+
+try:
+    a=int(input("Enter Month number: "))
+    if a%4==0:
+        print('It is leap year')
+    elif a%400==0:
+        print('It is a leap year')
+    else:
+        print('It is not a leap year')
+except:
+    print('The iput is must be a year')
+
+================ or ==========================
+
+try:
+    a=int(input("Enter Month number: "))
+    if a%4==0 or a%400==0:
+        print('It is leap year')
+    else:
+        print('It is not a leap year')
+except:
+    print('The iput is must be a year')
+
+6)Write a program to determine the largest of three numbers with if and else
+
+try:
+    a=int(input("Enter Month number: "))
+    b=int(input("Enter Month number: "))
+    c=int(input("Enter Month number: "))
+    if a>b and a>c:
+        print('A is the largest:', a)
+    elif b>a and b>c:
+        print('B is the largest:', b)
+    else:
+        print('C i the largest:', c)
+except:
+    print('The input is must be a Integer')
+
+7) Write a program to test a point (x, Y)lies in 1st, 2nd, 3rd and 4th quadrant or x-axis, y-axis and origin?
+i) what is values of x and y in 1st quadrant? both are positive
+ii)what is values of x and y in 2st quadrant? x is -ve and y is +ve
+iii)what is values of x and y in 3st quadrant? both are -ve
+iv)what is values of x and y in 1st quadrant? x is +ve and y is -ve
+v)what is values of x and x-axis in x-axis? x is non-zero and y is 0
+vi)what is values of x and y in y-axis? y is non-zero and x is 0
+vii)what is values of x and y in origin? both are zeros
+
+    x=eval(input("Enter a number: "))
+    y=eval(input("Enter a number: "))
+    if x>0 and y>0:
+        print('1st quadrant')
+    elif x<0 and y>0:
+        print('2nd quadrant')
+    elif x<0 and y<0:
+        print('3rd quadrant')
+    elif x>0 and y<0:
+        print('4th quadrant')
+    elif x>0 and y==0:
+        print('x-axis')
+    elif x<0 and y>0:
+        print('y-axis')
+    #elif x==0 and y==0:
+    #    print('origin')
+    else:
+        print('origin')
+
+8)write a program to determine largest, smallest and middle of the three numbers
+
+x = eval(input("Enter a number: "))
+y = eval(input("Enter a number: "))
+z = eval(input("Enter a number: "))
+
+print("Maximum value:", max(x, y, z))
+print("Minimum value:", min(x, y, z))
+a=x+y+z-(max(x, y, z) + min(x, y, z))
+print(a)
+
+9)write a program to determine three sides form a triangle or not 
+i)what is an equilateral triangle ---> All the three sides are equal. 
+find the area of equilateral triangle ---> sqrt(3)/4*a^2
+
+ii)Find perimeter if it is an isosceles triangle --> Any two sides are equal
+find perimeter of a isosceles triangle? ---> a+b+c
+
+iii)find both if it is scalene triangle, what is a scalene triangle ---> all the three sides are different
+wat is the area of scalene triangle? ---> sqrt(s*(s-a)*(s-b)*(s-c))
+what is the value of s? ---> s=a+b+c/2
+find perimeter of a scalene triangle? ---> a+b+c
+
+iv)what is the qualification of triangle? ---> sum of every two sides should be > 3rd side
+
+import math
+a = eval(input("Enter a number: "))
+b = eval(input("Enter a number: "))
+c = eval(input("Enter a number: "))
+if ((a+b)>c) or ((a+c)>b) or ((b+c)>a):
+    print('its a triangle')
+    if(a==b!=c) or (b==c!=a) or (c==a!=b):
+        print("It is an isoscles triangle")
+        print('Perimeter of a trianle:', a+b+c)
+    elif (a==b==c):
+        print("It is an Equilateral triangle")
+        print("Area of equilateral triangle:", (math.sqrt(3) / 4) * (a ** 2))
+    elif(a!=b!=c):
+        print('It is an salene triangle')
+        s= (a+b+c)/2
+        print('Area of Salene triangle:',math.sqrt(s * (s - a) * (s - b) * (s - c)))
+        print('perimenter of a salene triangle:',a+b+c)
+else:
+    print('its not a triangle')
+
+============================== or ===================================
+
+This is code written as by using methods 
+import math
+
+def is_triangle(a, b, c):
+  """Checks if three sides form a valid triangle."""
+  return a + b > c and a + c > b and b + c > a
+
+def equilateral_triangle(a, b, c):
+  """Checks if the triangle is equilateral."""
+  return a == b == c
+
+def isosceles_triangle(a, b, c):
+  """Checks if the triangle is isosceles."""
+  return a == b or a == c or b == c
+
+def scalene_triangle(a, b, c):
+  """Checks if the triangle is scalene."""
+  return a != b and a != c and b != c
+
+def area_equilateral(a):
+  """Calculates the area of an equilateral triangle."""
+  return (math.sqrt(3) / 4) * (a ** 2)
+
+def perimeter_isosceles(a, b, c):
+  """Calculates the perimeter of an isosceles triangle."""
+  return a + b + c
+
+def area_scalene(a, b, c):
+  """Calculates the area of a scalene triangle."""
+  s = (a + b + c) / 2
+  return math.sqrt(s * (s - a) * (s - b) * (s - c))
+
+def perimeter_scalene(a, b, c):
+    """Calculates the perimeter of a scalene triangle."""
+    return a+b+c
+
+def main():
+  try:
+    a = float(input("Enter the length of side a: "))
+    b = float(input("Enter the length of side b: "))
+    c = float(input("Enter the length of side c: "))
+
+    if is_triangle(a, b, c):
+      if equilateral_triangle(a, b, c):
+        print("It is an equilateral triangle.")
+        print(f"Area: {area_equilateral(a)}")
+      elif isosceles_triangle(a, b, c):
+        print("It is an isosceles triangle.")
+        print(f"Perimeter: {perimeter_isosceles(a,b,c)}")
+      elif scalene_triangle(a, b, c):
+        print("It is a scalene triangle.")
+        print(f"Area: {area_scalene(a, b, c)}")
+        print(f"Perimeter: {perimeter_scalene(a,b,c)}")
+      else:
+          print("It is a general triangle")
+          print(f"Perimeter: {a+b+c}")
+
+    else:
+      print("These sides do not form a triangle.")
+
+  except ValueError:
+    print("Invalid input. Please enter numeric values for the sides.")
+
+if __name__ == "__main__":
+  main()
+
+10) write a program to determine a point(x,y) lies inside, outside or on the circle. center is origin and radius is r?
+i)what is the distance between origin and point(x,y) ---> sqrt(x^2+y^2)
+ii)where is the point if distance > radius == outside the circle
+iii)where is the point if distance < radius == inside the circle
+iv)where is the point if distance = radius == on the circle
+
+import math
+a=eval(input("enter a number: "))
+b=eval(input("enter a number: "))
+r=eval(input('enter a number: '))
+d= math.sqrt(a*2+b*2)
+print("Distance between the points are: ",d)
+if d>r:
+    print('outside the circle')
+elif d<r:
+    print('inside the circle')
+elif d==r:
+    print('on the circle')
+else:
+    print('its not a circle')
+
